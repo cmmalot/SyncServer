@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>currentDocument</key>
+	<string>Repos/SyncServer/Syncerver.py</string>
+	<key>documents</key>
+	<array>
+		<dict>
+			<key>filename</key>
+			<string>SyncServerTests.py</string>
+			<key>lastUsed</key>
+			<date>2011-12-17T00:23:54Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Syncerver.py</string>
+			<key>lastUsed</key>
+			<date>2011-12-17T00:23:54Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+	</array>
+	<key>fileHierarchyDrawerWidth</key>
+	<integer>200</integer>
+	<key>metaData</key>
+	<dict>
+		<key>Repos/SyncServer/SyncServerTests.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>69</integer>
+				<key>line</key>
+				<integer>23</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>Repos/SyncServer/Syncerver.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>30</integer>
+				<key>line</key>
+				<integer>33</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>openDocuments</key>
+	<array>
+		<string>Repos/SyncServer/Syncerver.py</string>
+		<string>Repos/SyncServer/SyncServerTests.py</string>
+	</array>
+	<key>showFileHierarchyDrawer</key>
+	<true/>
+	<key>windowFrame</key>
+	<string>{{796, 0}, {749, 1028}}</string>
+</dict>
+</plist>
