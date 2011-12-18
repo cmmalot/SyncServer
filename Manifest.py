@@ -1,4 +1,4 @@
-d# encoding: utf-8
+# encoding: utf-8
 """
 Manifest.py
 
@@ -24,12 +24,14 @@ class Manifest(object):
     def fromDict(self, d):
         self.root = ElementTree(d2xml({'manifest':d}))
         self.M = d
-        self.data = self._beautify(ET.tostring(self.root.getroot(), encoding='utf-8'))
+        self.data = self._beautify(ET.tostring(self.root.getroot(),
+                                   encoding='utf-8'))
 
     def fromText(self, data):
         self.root = ElementTree.parse(data)
         self.M = xml2d(self.root)['manifest']
-        self.data = self._beautify(ET.tostring(self.root.getroot(), encoding='utf-8'))
+        self.data = self._beautify(ET.tostring(self.root.getroot(),
+                                   encoding='utf-8'))
 
     def save(self, fpath):
         f = open(fpath, 'w')
@@ -39,7 +41,8 @@ class Manifest(object):
     def fromFile(self, f):
         self.root = ElementTree(file=f)
         self.M = xml2d(self.root.getroot())['manifest']
-        self.data = self._beautify(ET.tostring(self.root.getroot(), encoding='utf-8'))
+        self.data = self._beautify(ET.tostring(self.root.getroot(),
+                                   encoding='utf-8'))
 
     def findProject(self, filter_func=None, name=None, max=1):
         if name and filter_func == None:

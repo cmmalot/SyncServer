@@ -36,6 +36,6 @@ class ManifestTests(unittest.TestCase):
     def test_save_format(self):
         print self.manifest.data
 
-    
+
 if __name__ == '__main__':
     unittest.main()
