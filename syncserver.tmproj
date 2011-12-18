@@ -3,29 +3,67 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Repos/SyncServer/Syncerver.py</string>
+	<string>Manifest.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>SyncServerTests.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-17T00:23:54Z</date>
+			<date>2011-12-18T00:02:41Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>Syncerver.py</string>
+			<string>static_manifest.xml</string>
 			<key>lastUsed</key>
-			<date>2011-12-17T00:23:54Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2011-12-18T01:00:55Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Manifest.py</string>
+			<key>lastUsed</key>
+			<date>2011-12-18T01:00:55Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>SyncServer.py</string>
+			<key>lastUsed</key>
+			<date>2011-12-17T23:15:51Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>Repos/SyncServer/SyncServerTests.py</key>
+		<key>Manifest.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>14</integer>
+				<key>line</key>
+				<integer>68</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>22</integer>
+		</dict>
+		<key>SyncServer.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>SyncServerTests.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -39,29 +77,47 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>Repos/SyncServer/Syncerver.py</key>
+		<key>static_manifest.xml</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>30</integer>
+				<integer>96</integer>
 				<key>line</key>
-				<integer>33</integer>
+				<integer>16</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>56</integer>
+				<key>line</key>
+				<integer>16</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>96</integer>
+				<key>line</key>
+				<integer>16</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>Repos/SyncServer/Syncerver.py</string>
-		<string>Repos/SyncServer/SyncServerTests.py</string>
+		<string>SyncServerTests.py</string>
+		<string>SyncServer.py</string>
+		<string>Manifest.py</string>
+		<string>static_manifest.xml</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{796, 0}, {749, 1028}}</string>
+	<string>{{797, 0}, {749, 1028}}</string>
 </dict>
 </plist>
