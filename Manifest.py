@@ -17,21 +17,21 @@ import unittest
 class Manifest(object):
     def __init__(self, data=None):
         if data:
-            self.root = ET.parse(data)
-            self.data = data
-            self.M = xml2d(self.root)['manifest']
+            if os.path.exists(data):
+                self.fromFile(data)
+            else:
+                self.fromText(data)
 
     def fromDict(self, d):
-        self.root = ElementTree(d2xml({'manifest':d}))
+        self.root = d2xml({'manifest':d})
         self.M = d
-        self.data = self._beautify(ET.tostring(self.root.getroot(),
-                                   encoding='utf-8'))
+        self.data = self._beautify(ET.tostring(self.root, encoding='utf-8'))
 
     def fromText(self, data):
-        self.root = ElementTree.parse(data)
+        e = ET.fromstring(data)
+        self.root = e
         self.M = xml2d(self.root)['manifest']
-        self.data = self._beautify(ET.tostring(self.root.getroot(),
-                                   encoding='utf-8'))
+        self.data = self._beautify(data)
 
     def save(self, fpath):
         f = open(fpath, 'w')
@@ -39,10 +39,9 @@ class Manifest(object):
         f.close()
 
     def fromFile(self, f):
-        self.root = ElementTree(file=f)
-        self.M = xml2d(self.root.getroot())['manifest']
-        self.data = self._beautify(ET.tostring(self.root.getroot(),
-                                   encoding='utf-8'))
+        self.root = ET.parse(f).getroot()
+        self.M = xml2d(self.root)['manifest']
+        self.data = self._beautify(ET.tostring(self.root, encoding='utf-8'))
 
     def findProject(self, filter_func=None, name=None, max=1):
         if name and filter_func == None:

@@ -16,6 +16,9 @@ class ManifestTests(unittest.TestCase):
     def setUp(self):
         self.manifest = Manifest()
         self.manifest.fromFile('static_manifest.xml')
+        f = open('static_manifest.xml')
+        data = f.read()
+        self.data = data
 
     def test_content(self):
         self.assertEqual(self.manifest.findProject(name='platform/build')\
@@ -33,9 +36,13 @@ class ManifestTests(unittest.TestCase):
         self.test_content()
         self.test_save()
 
-    def test_save_format(self):
-        print self.manifest.data
+    def test_fromText(self):
+        self.manifest.fromText(self.data)
+        self.test_content()
 
+    def test_constructor_with_data(self):
+        self.manifest = Manifest(self.data)
+        self.test_content
 
 if __name__ == '__main__':
     unittest.main()
