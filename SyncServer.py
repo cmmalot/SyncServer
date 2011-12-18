@@ -12,7 +12,7 @@ from twisted.web import xmlrpc, server
 
 
 class SyncServer(xmlrpc.XMLRPC):
-WOP    """
+    """
     Sync server for repo smart-sync.
     """
     def __init__(self):
