@@ -33,12 +33,15 @@ class Manifest(object):
         self.M = xml2d(self.root)['manifest']
         self.data = self._beautify(data)
 
-    def save(self, fpath):
+    def save(self, fpath=None):
+        if fpath == None:
+            fpath == self.path
         f = open(fpath, 'w')
         f.write(self.data)
         f.close()
 
     def fromFile(self, f):
+        self.path = f
         self.root = ET.parse(f).getroot()
         self.M = xml2d(self.root)['manifest']
         self.data = self._beautify(ET.tostring(self.root, encoding='utf-8'))
