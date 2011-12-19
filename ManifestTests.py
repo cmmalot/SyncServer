@@ -14,8 +14,7 @@ import unittest
 
 class ManifestTests(unittest.TestCase):
     def setUp(self):
-        self.manifest = Manifest()
-        self.manifest.fromFile('static_manifest.xml')
+        self.manifest = Manifest('static_manifest.xml')
         f = open('static_manifest.xml')
         data = f.read()
         self.data = data
