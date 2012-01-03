@@ -20,7 +20,7 @@ class ManifestTests(unittest.TestCase):
         self.data = data
 
     def test_content(self):
-        self.assertEqual(self.manifest.findProject(name='platform/build')\
+        self.assertEqual(self.manifest.find_project(name='platform/build')\
             ['revision'], "81056a1c2bf8d42a9ca70eee90bb04e268dcddb1")
 
     def test_save(self):
@@ -30,13 +30,13 @@ class ManifestTests(unittest.TestCase):
         self.manifest.save(mf)
         self.assertTrue(os.path.exists(mf))
 
-    def test_fromDict(self):
-        self.manifest.fromDict(self.manifest.M)
+    def test_from_dict(self):
+        self.manifest.from_dict(self.manifest.M)
         self.test_content()
         self.test_save()
 
-    def test_fromText(self):
-        self.manifest.fromText(self.data)
+    def test_from_string(self):
+        self.manifest.from_string(self.data)
         self.test_content()
 
     def test_constructor_with_data(self):

@@ -18,16 +18,16 @@ class Manifest(object):
     def __init__(self, data=None):
         if data:
             if os.path.exists(data):
-                self.fromFile(data)
+                self.from_file(data)
             else:
-                self.fromText(data)
+                self.from_string(data)
 
-    def fromDict(self, d):
+    def from_dict(self, d):
         self.root = d2xml({'manifest':d})
         self.M = d
         self.data = self._beautify(ET.tostring(self.root, encoding='utf-8'))
 
-    def fromText(self, data):
+    def from_string(self, data):
         e = ET.fromstring(data)
         self.root = e
         self.M = xml2d(self.root)['manifest']
@@ -40,13 +40,13 @@ class Manifest(object):
         f.write(self.data)
         f.close()
 
-    def fromFile(self, f):
+    def from_file(self, f):
         self.path = f
         self.root = ET.parse(f).getroot()
         self.M = xml2d(self.root)['manifest']
         self.data = self._beautify(ET.tostring(self.root, encoding='utf-8'))
 
-    def findProject(self, filter_func=None, name=None, max=1):
+    def find_project(self, filter_func=None, name=None, max=1):
         if name and filter_func == None:
             filter_func = lambda x : x['name'] == name
         matches = filter(filter_func, self.M['project'])
