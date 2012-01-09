@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # encoding: utf-8
 """
 MemCache.py
@@ -12,14 +11,14 @@ import os
 
 class MemCache:
     def __init__(self, size=1):
-        self.size = size
+        self.maxsize = size
         self.items = []
         self.item_data = {}
 
     def store(self, key=None, value=None):
         if key in self.items:
             return
-        if len(self.items) <= self.size:
+        if self.size <= self.maxsize:
             self.items.append(key)
             self.item_data[key] = value
         else:
@@ -31,6 +30,8 @@ class MemCache:
         if key in self.items:
             self.refresh(key)
             return self.item_data[key]
+        else:
+            raise KeyError('Key %s does not exist' % key)
 
     def remove(self, key=None):
         if key in self.items:
@@ -44,4 +45,24 @@ class MemCache:
             self.items.remove(key)
             self.items.append(key)
 
-    
+    def clear(self):
+        """docstring for clear"""
+        self.__init__(self.size)
+
+    def index(self, key=None):
+        """docstring for index"""
+        return self.items.index(key)
+
+    def key_at_index(self, index):
+        """docstring"""
+        return self.items[index]
+
+    def size():
+        doc = "The size property."
+        def fget(self):
+            return len(self.items)
+        return locals()
+    size = property(**size())
+
+if __name__ == '__main__':
+    unittest.main()
