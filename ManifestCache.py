@@ -1,3 +1,5 @@
+import os
+
 
 class ManifestCache:
     '''This class implements a manifest file cache.
@@ -12,6 +14,8 @@ class ManifestCache:
 
         if os.path.isdir(self.cachedir):
             self._load()
+
+        self.memcache = MemCache(50)
 
     def store(self, manifest, label=None):
         pass
@@ -30,18 +34,28 @@ class ManifestCache:
 
     def _load(self):
         pass
-    
-    
+
+    def _get_dir_and_file_name(self, label):
+        try:
+            parts = label.split('.')
+        except ValueError, e:
+            #TODO: Handle error
+         filename = parts.pop()       
+         dirname = os.path.join(parts)
+         return (dirname, filename)
+
+
 class Manifest:
-    def __init__(self, name="", data=""):
-        self.name = name
+    def __init__(self, label="", data=""):
+        self.label = label
         self.data = data
 
     def __str__(self):
-        return self.name
+        return self.label
 
     def __repr__(self):
-        return "Manifest(name=%r, data=%s)" % (self.name, self.data)
+        return "Manifest(label=%r, data=%s)" % (self.label, self.data)
+
 
 class MemCache:
     def __init__(self, size=1):
@@ -73,7 +87,8 @@ class MemCache:
     def refresh(self, key=None):
         if key in self.items:
             if self.items.index(key) == (self.size -1):
-                self.items.remove(key)
-                self.items.append(key)
+                return
+            self.items.remove(key)
+            self.items.append(key)
 
     

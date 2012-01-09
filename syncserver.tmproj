@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Manifest.py</string>
+	<string>ManifestCache.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -22,13 +22,25 @@
 			<key>filename</key>
 			<string>Manifest.py</string>
 			<key>lastUsed</key>
-			<date>2011-12-18T01:00:55Z</date>
+			<date>2012-01-05T23:51:38Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>SyncServer.py</string>
 			<key>lastUsed</key>
 			<date>2011-12-17T23:15:51Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>ManifestTests.py</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>ManifestCache.py</string>
+			<key>lastUsed</key>
+			<date>2012-01-05T23:51:38Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -48,6 +60,20 @@
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>22</integer>
+		</dict>
+		<key>ManifestCache.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>30</integer>
+				<key>line</key>
+				<integer>22</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>SyncServer.py</key>
 		<dict>
@@ -113,11 +139,12 @@
 		<string>SyncServerTests.py</string>
 		<string>SyncServer.py</string>
 		<string>Manifest.py</string>
+		<string>ManifestCache.py</string>
 		<string>static_manifest.xml</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{797, 0}, {749, 1028}}</string>
+	<string>{{628, 0}, {749, 1028}}</string>
 </dict>
 </plist>
